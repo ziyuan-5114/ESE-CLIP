@@ -18,7 +18,7 @@ future plan for Flickr30k and FAISS-based efficient retrieval.
 
 Keywords: CLIP; ESE; image–text retrieval; feature split; PCA; FAISS.
 
-1. Model and Dataset
+# 1. Model and Dataset
 
 The base model is CLIP ViT-B/32, implemented through openai/clip-vit-base- patch32. The dataset used in the current experiments is Flickr8k. Each image is
 paired with captions, allowing both image-to-text and text-to-image retrieval evaluation. The main representation is prefix_256, the first 256 dimensions of the CLIP feature. In later
@@ -35,7 +35,7 @@ fourth experiment tests PCA as a future direction and identifies its boundary.
 
 <img width="1500" height="794" alt="image" src="https://github.com/user-attachments/assets/510f2b10-f703-461d-bb03-2cd4aa849490" />
 
-2. Experiments and Results
+# 2. Experiments and Results
 
 Raw CLIP vs ESE-CLIP
 
@@ -56,7 +56,7 @@ PCA Boundary Analysis
 
 <img width="1218" height="536" alt="image" src="https://github.com/user-attachments/assets/a4591cf7-e309-43d9-8aa5-953086cd191a" />
 
-3. Conclusion
+# 3. Conclusion
 
 This report studies how ESE can improve CLIP-based image–text retrieval under shallowlayer and low- dimensional settings. The experiments show that Raw CLIP’s shallow
 prefix_256 is almost unusable, but ESE-CLIP raises L4–L6 MeanR from 1.31 to 47.20. Layer-wise weight tuning further improves the shallow result to 54.26 with pw_l6_b4. The
